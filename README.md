@@ -1,30 +1,187 @@
-**Breast Tumor Classification Project**:
+# 🩺 Breast Tumor Detection using CNN
 
-I built a Convolutional Neural Network (CNN) to classify breast tumors as benign or malignant using medical images.
-
-**Project Overview**:
-Dataset: I used a dataset of breast tumor images. The images are divided into two categories: benign (0) and malignant (1).
-
-Preprocessing: I resized all images to 224x224 pixels and normalized their pixel values to improve the model's performance.
-
-Model: The CNN I created has layers that extract features from the images, reduce the dimensions, and finally classify them as benign or malignant.
-
-Training: I split the data into training and testing sets (80% training, 20% testing) and applied oversampling to handle class imbalance. I trained the model in batches of 128 images for 2 epochs.
-
-Testing: After training, I evaluated the model on the test dataset to check its accuracy.
-
-Prediction: I added a function that lets me predict if a tumor is benign or malignant for a specific image.
-
-Tools and Libraries:
-
-TensorFlow
-NumPy
-Pillow (PIL)
-scikit-learn
-imbalanced-learn (for handling class imbalance)
+A Deep Learning project that classifies **breast ultrasound images** into **Normal** or **Malignant** using a Convolutional Neural Network (CNN) built with TensorFlow.
 
 
-**Outcome**:
+---
 
-The model can predict if a tumor is benign or malignant based on images. It helps with early diagnosis using deep learning.
+## Application
 
+
+![Demo](image.png) 
+
+---
+
+## Features
+
+- CNN built from scratch using TensorFlow/Keras
+- Binary image classification
+- Automatic image preprocessing
+- Interactive Streamlit interface
+- Confidence score prediction
+- Model saved after training
+- Classification report generation
+- Confusion matrix generation
+
+---
+
+## 📂 Project Structure
+
+```text
+Breast-Tumor-Detection
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data
+│   ├── train
+│   │   ├── normal
+│   │   └── malignant
+│   └── test
+│
+├── models
+│   ├── cnn_model.keras
+│   └── metrics.json
+│
+└── src
+    ├── __init__.py
+    ├── data_loader.py
+    ├── model.py
+    ├── predict.py
+    └── train.py
+```
+
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yasminebounasla/Breast-Tumor-Detection.git
+
+cd Breast-Tumor-Detection
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+##  Train the model
+
+```bash
+python -m src.train
+```
+
+or
+
+```bash
+python -m src.train --data data/train
+```
+
+The trained model will automatically be saved inside
+
+```text
+models/
+```
+
+---
+
+## 🌐 Run the application
+
+```bash
+streamlit run app.py
+```
+
+Open
+
+```
+http://localhost:8501
+```
+
+Upload an ultrasound image and click **Predict**.
+
+---
+
+## 🧠 CNN Architecture
+
+Input (224×224×3)
+
+↓
+
+Conv2D (32)
+
+↓
+
+MaxPooling
+
+↓
+
+Conv2D (64)
+
+↓
+
+MaxPooling
+
+↓
+
+Conv2D (128)
+
+↓
+
+MaxPooling
+
+↓
+
+Flatten
+
+↓
+
+Dense (128)
+
+↓
+
+Dropout
+
+↓
+
+Sigmoid
+
+↓
+
+Prediction
+
+---
+
+## 🛠 Technologies
+
+- Python
+- TensorFlow / Keras
+- NumPy
+- Pillow
+- Streamlit
+- Scikit-Learn
+- imbalanced-learn
+
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 👩‍💻 Author
+
+**Yasmine Bounasla**
+
+GitHub
+
+https://github.com/yasminebounasla
