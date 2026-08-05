@@ -61,4 +61,4 @@ models/
 # Uncomment if you don't want to upload
 # the dataset to GitHub
 # ======================================
-# data/
+data/
