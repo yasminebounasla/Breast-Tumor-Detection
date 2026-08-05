@@ -2,13 +2,11 @@
 
 A Deep Learning project that classifies **breast ultrasound images** into **Normal** or **Malignant** using a Convolutional Neural Network (CNN) built with TensorFlow.
 
-
 ---
 
 ## Application
 
-
-![Demo](image.png) 
+![Demo](image.png)
 
 ---
 
@@ -55,6 +53,13 @@ Breast-Tumor-Detection
 
 ---
 
+## Dataset
+
+<!-- TODO: replace with the actual source/link of your ultrasound dataset -->
+This project expects breast ultrasound images sorted into `normal/` and `malignant/` folders, as shown in the project structure above. The dataset itself is **not included in this repository** (see `.gitignore`) — download it from `<add your dataset source/link here>` and place it under `data/train/` and `data/test/` before training.
+
+---
+
 ## Installation
 
 Clone the repository
@@ -73,7 +78,7 @@ pip install -r requirements.txt
 
 ---
 
-##  Train the model
+## Train the model
 
 ```bash
 python -m src.train
@@ -169,6 +174,12 @@ Prediction
 - Scikit-Learn
 - imbalanced-learn
 
+---
+
+## Possible improvements
+
+- Add data augmentation (rotation, flips) during training — likely to help generalization given the dataset size
+- Use a proper train/validation/test split (currently the test set doubles as the validation set during training)
 
 ---
 
