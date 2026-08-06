@@ -55,8 +55,7 @@ Breast-Tumor-Detection
 
 ## Dataset
 
-<!-- TODO: replace with the actual source/link of your ultrasound dataset -->
-This project expects breast ultrasound images sorted into `normal/` and `malignant/` folders, as shown in the project structure above. The dataset itself is **not included in this repository** (see `.gitignore`) — download it from `<add your dataset source/link here>` and place it under `data/train/` and `data/test/` before training.
+This project expects breast ultrasound images sorted into `normal/` and `malignant/` folders, as shown in the project structure above. The dataset itself is **not included in this repository** (see `.gitignore`) — download it from the [Micro Club Pinktober — Breast Cancer Detection](https://www.kaggle.com/competitions/micro-club-pinktober-breast-cancer-detection/data) Kaggle competition and place it under `data/train/` and `data/test/` before training.
 
 ---
 
